@@ -1,0 +1,50 @@
+<html>
+<head>
+<title>build.gradle</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #aeb5bd;}
+.s1 { color: #807d6e; font-weight: bold;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+build.gradle</font>
+</center></td></tr></table>
+<pre><span class="s0">plugins {</span>
+	<span class="s0">id </span><span class="s1">'org.springframework.boot' </span><span class="s0">version </span><span class="s1">'2.5.5'</span>
+	<span class="s0">id </span><span class="s1">'io.spring.dependency-management' </span><span class="s0">version </span><span class="s1">'1.0.11.RELEASE'</span>
+	<span class="s0">id </span><span class="s1">'java'</span>
+<span class="s0">}</span>
+
+<span class="s0">group = </span><span class="s1">'com.crud'</span>
+<span class="s0">version = </span><span class="s1">'0.0.1-SNAPSHOT'</span>
+<span class="s0">sourceCompatibility = </span><span class="s1">'11'</span>
+
+<span class="s0">repositories {</span>
+	<span class="s0">mavenCentral()</span>
+<span class="s0">}</span>
+
+<span class="s0">dependencies {</span>
+	<span class="s0">implementation </span><span class="s1">'org.springframework.boot:spring-boot-starter-data-jpa:2.5.4'</span>
+	<span class="s0">implementation </span><span class="s1">'org.springframework.boot:spring-boot-starter-validation:2.5.4'</span>
+	<span class="s0">implementation </span><span class="s1">'org.springframework.boot:spring-boot-starter-web:2.5.4'</span>
+	<span class="s0">testImplementation (</span><span class="s1">'org.springframework.boot:spring-boot-starter-test:2.5.4'</span><span class="s0">) {</span>
+		<span class="s0">exclude group: </span><span class="s1">'org.junit.vintage'</span><span class="s0">, module: </span><span class="s1">'junit-vintage-engine'</span>
+	<span class="s0">}</span>
+	<span class="s0">compileOnly </span><span class="s1">'org.projectlombok:lombok:1.18.20'</span>
+	<span class="s0">annotationProcessor </span><span class="s1">'org.projectlombok:lombok:1.18.20'</span>
+
+	<span class="s0">testCompileOnly </span><span class="s1">'org.projectlombok:lombok:1.18.20'</span>
+	<span class="s0">testAnnotationProcessor </span><span class="s1">'org.projectlombok:lombok:1.18.20'</span>
+	<span class="s0">runtimeOnly </span><span class="s1">'mysql:mysql-connector-java:8.0.25'</span>
+<span class="s0">}</span>
+
+<span class="s0">test {</span>
+	<span class="s0">useJUnitPlatform()</span>
+<span class="s0">}</span>
+</pre>
+</body>
+</html>

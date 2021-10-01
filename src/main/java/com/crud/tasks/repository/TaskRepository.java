@@ -11,7 +11,7 @@ import java.util.Optional;
 @Repository
 public interface TaskRepository extends CrudRepository<Task, Long> {
     @Override
-    List<Task> findAll();
+    public List<Task> findAll ( );
 
     Task findTaskById(Long taskId);
 
