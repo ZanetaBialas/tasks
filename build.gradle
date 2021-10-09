@@ -25,9 +25,11 @@ dependencies {
 
 	testCompileOnly 'org.projectlombok:lombok:1.18.20'
 	testAnnotationProcessor 'org.projectlombok:lombok:1.18.20'
-	runtimeOnly 'org.postgresql:postgresql:42.2.24.jre7'
-	//runtimeOnly 'mysql:mysql-connector-java:8.0.25'
+	//runtimeOnly 'org.postgresql:postgresql:42.2.24.jre7'
+	runtimeOnly 'mysql:mysql-connector-java:8.0.25'
 	//providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat:2.5.5'
+
+	annotationProcessor group: 'org.springframework.boot', name: 'spring-boot-configuration-processor'
 }
 
 test {

@@ -7,15 +7,16 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 
 @SpringBootApplication
 public class TasksApplication  {
-	//@Override
-	//protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-	//	return application.sources(TasksApplication.class);
-	//}
+
 	public static void main(String[] args) {
 
 		SpringApplication.run(TasksApplication.class, args);
 	}
 
+	//@Override
+	//protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+	//	return application.sources(TasksApplication.class);
+	//}
 
 
 }
