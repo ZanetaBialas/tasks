@@ -1,16 +1,20 @@
 package com.crud.tasks.domain;
 
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class BadgesDto {
+@AllArgsConstructor
+@NoArgsConstructor
+class Badges {
 
     @JsonProperty("votes")
     private int votes;
+
     @JsonProperty("attachmentsByType")
-    private AttachmentsByTypeDto attachment;
+    private AttachmentsByType attachmentsByType;
 }
